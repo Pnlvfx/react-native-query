@@ -30,6 +30,9 @@
     "LICENSE",
     "README.md"
   ],
+  "dependencies": {
+    "@tanstack/react-query": "^5.90.6"
+  },
   "devDependencies": {
     "@goatjs/node": "^1.39.0",
     "@goatjs/node-eslint": "^1.19.0",
@@ -37,7 +40,6 @@
     "@goatjs/ts-unused-exports": "^1.39.0",
     "@goatjs/typescript-config": "^1.39.0",
     "@react-native-community/netinfo": "^11.4.1",
-    "@tanstack/react-query": "^5.90.6",
     "@types/node": "^24.10.0",
     "@types/react": "^19.2.2",
     "eslint": "^9.38.0",
@@ -48,8 +50,7 @@
     "typescript": "^5.9.3"
   },
   "peerDependencies": {
-    "@react-native-community/netinfo": "*",
-    "@tanstack/react-query": "*"
+    "@react-native-community/netinfo": "*"
   },
   "packageManager": "yarn@4.10.3+sha512.c38cafb5c7bb273f3926d04e55e1d8c9dfa7d9c3ea1f36a4868fa028b9e5f72298f0b7f401ad5eb921749eb012eb1c3bb74bf7503df3ee43fd600d14a018266f"
 }
