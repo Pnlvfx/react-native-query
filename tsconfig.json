@@ -1,0 +1,10 @@
+{
+  "extends": "@goatjs/typescript-config/react-library/tsconfig.json",
+  "include": ["src", "eslint.config.js", "tools"],
+  "compilerOptions": {
+    "outDir": "dist",
+    "moduleResolution": "bundler",
+    "types": null,
+    "customConditions": ["react-native-strict-api"]
+  }
+}
