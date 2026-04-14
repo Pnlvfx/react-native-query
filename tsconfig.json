@@ -4,7 +4,6 @@
   "compilerOptions": {
     "outDir": "dist",
     "moduleResolution": "bundler",
-    "types": null,
     "customConditions": ["react-native-strict-api"]
   }
 }

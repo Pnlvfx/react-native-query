@@ -1,23 +1,8 @@
-import NetInfo from '@react-native-community/netinfo';
-import {
-  focusManager,
-  onlineManager,
-  QueryClientProvider as TanStackQueryClientProvider,
-  type QueryClientProviderProps,
-} from '@tanstack/react-query';
+import { focusManager, QueryClientProvider as TanStackQueryClientProvider, type QueryClientProviderProps } from '@tanstack/react-query';
 import { useEffect } from 'react';
 import { AppState } from 'react-native';
 
-export const QueryClientProvider = (props: QueryClientProviderProps) => {
-  /** query net info */
-  useEffect(() => {
-    onlineManager.setEventListener((setOnline) => {
-      return NetInfo.addEventListener((state) => {
-        setOnline(!!state.isConnected);
-      });
-    });
-  }, []);
-
+export const QueryClientProvider = ({ client, children }: QueryClientProviderProps) => {
   /** query app state */
   useEffect(() => {
     const sub = AppState.addEventListener('change', (status) => {
@@ -29,5 +14,5 @@ export const QueryClientProvider = (props: QueryClientProviderProps) => {
     };
   }, []);
 
-  return <TanStackQueryClientProvider {...props} />;
+  return <TanStackQueryClientProvider client={client}>{children}</TanStackQueryClientProvider>;
 };

@@ -1,2 +1,2 @@
-export * from '@tanstack/react-query';
 export { QueryClientProvider } from './provider';
+export { createQueryClient } from './client';
